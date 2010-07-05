@@ -1,0 +1,23 @@
+{
+	"name": "patr",
+	"author": "Kris Zyp",
+	"dependencies": ["promised-io"],
+	"contributors": [],
+	"keywords": [
+		"test",
+		"promise"
+	],
+	"mappings": {
+		"promised-io": "jar:http://github.com/kriszyp/promised-io/zipball/master!/lib/"
+	},
+	"githubName": "patr",
+	"type": "zip",
+	"location": "http://github.com/kriszyp/patr/zipball/master",
+	"overlay": {
+		"npm": {
+			"dependencies": {
+				"promised-io": "*"
+			}
+		}
+	}
+}
