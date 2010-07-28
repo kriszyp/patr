@@ -1,6 +1,7 @@
 {
 	"name": "patr",
 	"author": "Kris Zyp",
+	"version": "0.0.1",
 	"dependencies": ["promised-io"],
 	"contributors": [],
 	"keywords": [
@@ -17,7 +18,9 @@
 		"npm": {
 			"dependencies": {
 				"promised-io": "*"
-			}
+			},
+			"directories": { "lib": "./lib" },
+			"main": "./lib/runner"
 		}
 	}
 }
