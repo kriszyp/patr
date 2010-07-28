@@ -34,7 +34,8 @@ test file:
 With these aggregate test module, each test file's tests are included in a nested object
 that will be tested as a subgroup of tests.
 
-= Using Promises for Asynchronous Testing =
+Using Promises for Asynchronous Testing
+==========================
 
 Promises make asynchronous testing very simple. You simply return a promise from 
 your test to indicate when a test is completed. When using promise-based coding this
