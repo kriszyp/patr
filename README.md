@@ -51,6 +51,15 @@ promised-io's fs module:
     };
     ...
 
+Advanced Testing
+============
+
+You can include additional testing options by using a test object instead of a function.
+The test object can have the following properties:
+
+* runTest - The function to execute for the test
+* iterations - The number of times to execute the test
+
 Patr is part of the Persevere project, and therefore is licensed under the
 AFL or BSD license. The Persevere project is administered under the Dojo foundation,
 and all contributions require a Dojo CLA.
