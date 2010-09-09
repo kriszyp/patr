@@ -54,11 +54,19 @@ promised-io's fs module:
 Advanced Testing
 ============
 
-You can include additional testing options by using a test object instead of a function.
+You can include additional testing options by setting flags on the test objects (that have the test functions).
 The test object can have the following properties:
 
-* runTest - The function to execute for the test
 * iterations - The number of times to execute the test
+
+These properties are inherited, if they are set by a parent object, than the children
+objects will inherit the behavior unlesss it is overriden.
+
+These properties can also be set from the command line. This is done by including
+-name value arguments when starting the test module. For example:
+
+    nodules test.js -iterations 1000
+
 
 Patr is part of the Persevere project, and therefore is licensed under the
 AFL or BSD license. The Persevere project is administered under the Dojo foundation,
