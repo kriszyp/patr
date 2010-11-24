@@ -51,6 +51,22 @@ promised-io's fs module:
     };
     ...
 
+Asynchronous assert module
+======================
+
+Patr includes an "assert" module (patr/assert) that is upgraded for promise-based asynchronous
+code blocks. In particular, the "throws" method can be used to enforce that a code block
+will eventually throw (or reject) even if it happens asynchronously. For example:
+
+    var assert = require("patr/assert");
+    exports.testFile = function(){
+      return assert.throws(function(){
+        // asserts that this must throw/reject eventually
+        return fs.readFile("non-existent file");
+      });
+    };
+
+
 Advanced Testing
 ============
 
