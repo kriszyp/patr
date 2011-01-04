@@ -1,7 +1,7 @@
 {
   "name": "patr",
   "author": "Kris Zyp",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "contributors": [],
   "keywords": [
     "test",
@@ -22,7 +22,7 @@
     "url":"http://github.com/kriszyp/patr"
   },
   "mappings": {
-    "promised-io": "http://github.com/kriszyp/promised-io/zipball/v0.2.1"
+    "promised-io": "http://github.com/kriszyp/promised-io/zipball/v0.2.2"
   },
   "githubName": "patr",
   "type": "zip",
