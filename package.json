@@ -1,7 +1,7 @@
 {
   "name": "patr",
   "author": "Kris Zyp",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "contributors": [],
   "keywords": [
     "test",
@@ -28,7 +28,7 @@
   "type": "zip",
   "location": "http://github.com/kriszyp/patr/zipball/master",
   "dependencies": {
-    "promised-io": "0.2.1"
+    "promised-io": "0.2.2"
   },
   "directories": { "lib": "./lib" },
   "main": "./lib"
