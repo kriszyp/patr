@@ -32,5 +32,6 @@
     "promised-io": "0.2.3"
   },
   "directories": { "lib": "./lib" },
-  "main": "./lib"
+  "main": "./lib",
+  "icon": "http://packages.dojofoundation.org/images/persvr.png"
 }
