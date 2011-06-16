@@ -31,7 +31,7 @@
   "dependencies": {
     "promised-io": "0.2.3"
   },
-  "directories": { "lib": "./lib" },
-  "main": "./lib",
+  "directories": { "lib": "." },
+  "main": "./runner",
   "icon": "http://packages.dojofoundation.org/images/persvr.png"
 }
