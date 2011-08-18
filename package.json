@@ -29,7 +29,7 @@
   "type": "zip",
   "location": "http://github.com/kriszyp/patr/zipball/master",
   "dependencies": {
-    "promised-io": "0.2.3"
+    "promised-io": ">=0.2.3"
   },
   "directories": { "lib": "." },
   "main": "./runner",
