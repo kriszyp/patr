@@ -1,6 +1,6 @@
 // Based on http://wiki.commonjs.org/wiki/Unit_Testing/1.0#Assert with
 // modifications to handle promises
-(function(define){ 
+(function(define){
 define(["promised-io/promise", "assert"],function(promise, assert){
 var exports = {};
 var when = promise.when;
@@ -16,8 +16,10 @@ exports.equal = function(actual, expected, message) {
 };
 
 exports["throws"] = function(block, error, message){
+	var failed = false;
 	try{
 		return when(block(), function(){
+			failed = true;
 			throw new Error(message || ("Error" || error.name) + " was expected to be thrown and was not");
 		}, function(e){
 			if(error && !(e instanceof error)){
@@ -25,7 +27,7 @@ exports["throws"] = function(block, error, message){
 			}
 		});
 	}catch(e){
-		if(error && !(e instanceof error)){
+		if((error && !(e instanceof error)) || failed){
 			throw e;
 		}
 	}
