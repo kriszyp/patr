@@ -1,7 +1,31 @@
 // Based on http://wiki.commonjs.org/wiki/Unit_Testing/1.0#Assert with
 // modifications to handle promises
 (function(define){
-define(["promised-io/promise", "assert"],function(promise, assert){
+define(["promised-io/promise"],function(promise){
+var assert;
+try{
+	assert = require("assert");
+}catch(e){
+	assert = {
+		equal: function(a, b, message){
+			console.assert(a == b, message);
+		},
+		deepEqual: function(a, b, message){
+			if(a && typeof a == "object" && b && typeof b == "object"){
+				for(var i in a){
+					assert.deepEqual(a[i], b[i], message);
+				}
+				for(var i in b){
+					if(!(i in a)){
+						assert.equal(a[i], b[i], message);
+					}
+				}
+			}else{
+				console.assert(a == b, message);	
+			}			
+		},
+	}
+}
 var exports = {};
 var when = promise.when;
 exports.assert = {};

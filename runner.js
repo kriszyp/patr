@@ -6,14 +6,16 @@ var when = promise.when,
 	onError;
 function run(tests, args){
 	if(!args){
-		var params = require("promised-io/process").args;
-		args = {};
-		for(var i = 0; i < params.length; i++){
-			if(params[i].charAt(0) == "-"){
-				args[params[i].substring(1)] = params[i+1];
-				params++; 
+		try{
+			var params = require("promised-io/process").args;
+			args = {};
+			for(var i = 0; i < params.length; i++){
+				if(params[i].charAt(0) == "-"){
+					args[params[i].substring(1)] = params[i+1];
+					params++; 
+				}
 			}
-		}
+		}catch(e){}
 	}
 	print("Running tests ");
 	doTests(compileTests(tests, args));
